@@ -1339,7 +1339,7 @@ def build_service(target: str, backend: Optional[str] = None) -> OsintgramServic
     """
     backend = backend or os.getenv("INSTAGRAM_BACKEND")
 
-    use_hikerapi = backend == "hikerapi"
+    use_hikerapi = False
     if use_hikerapi:
         token = resolve_hiker_token()
         if not token:
